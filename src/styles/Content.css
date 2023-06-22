@@ -1,0 +1,23 @@
+main {
+  display: flex;
+  max-width: 1800px;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 4rem 8rem;
+  margin: 0px auto 4rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  display: grid;
+  grid-template-columns: auto auto;
+  /* grid-template-rows: auto auto; */
+}
+
+.display-header {
+  grid-column: 1/3;
+}
