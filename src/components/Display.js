@@ -5,7 +5,7 @@ import DisplayWork from "./DisplayWork";
 const Display = ({ resume }) => {
   const { personal } = resume;
   return (
-    <div className="display">
+    <div className="display" id="display">
       <DisplayHeader {...personal} />
       <DisplayWork {...resume} />
       <DisplayPersonal {...personal} />

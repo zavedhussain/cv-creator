@@ -1,6 +1,15 @@
+import { blankEducation } from "../data";
+
 const Education = ({ resume, setResume }) => {
   const { education } = resume;
-  // console.log(experience);
+
+  const handleAdd = () => {
+    let edu = { ...blankEducation, id: new Date().getTime().toString() };
+    setResume({
+      ...resume,
+      education: [...education, edu],
+    });
+  };
 
   const handleChange = (event, itemID) => {
     const newEducation = education.map((item) => {
@@ -27,8 +36,13 @@ const Education = ({ resume, setResume }) => {
   };
 
   return (
-    <div className="education">
-      <h3>Education</h3>
+    <article className="education">
+      <div className="article-header">
+        <h3>Education</h3>
+        <button type="button" className="btn btn-success" onClick={handleAdd}>
+          Add
+        </button>
+      </div>
       {[...education].reverse().map((item) => {
         const { id, university, degree, city, subject, from, to } = item;
         return (
@@ -79,14 +93,17 @@ const Education = ({ resume, setResume }) => {
               id="to"
               onChange={(event) => handleChange(event, id)}
             ></input>
-            <button type="button" onClick={() => handleDelete(id)}>
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={() => handleDelete(id)}
+            >
               Delete
             </button>
           </section>
         );
       })}
-      <button type="button">Add</button>
-    </div>
+    </article>
   );
 };
 export default Education;

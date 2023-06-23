@@ -1,6 +1,47 @@
+:root {
+  --default: rgb(204, 204, 204);
+  --background: rgb(238, 238, 238);
+  --blue: rgb(29, 78, 216);
+  --primary: rgb(23, 37, 84);
+  --black: rgb(42, 42, 42);
+  --grey: rgb(51, 51, 51);
+  --success: rgb(48, 76, 10);
+}
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 body {
   font-family: Nunito, sans-serif;
-  /* font-size: 1.6rem; */
-  background-color: rgb(204, 204, 204);
-  color: rgb(51, 51, 51);
+  background-color: var(--default);
+  color: var(--primary);
+  padding: 0px;
+  margin: 0px;
+}
+
+button,
+input,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+.btn {
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn.btn-success {
+  background-color: var(--success);
+}
+.btn.btn-danger {
+  background-color: var(--black);
+}
+
+li {
+  list-style: none;
 }

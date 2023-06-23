@@ -1,27 +1,29 @@
-const DisplayPersonal = ({ firstName, address, phone, email }) => {
+// import img from "../assets/image1.jpg";
+
+const DisplayPersonal = ({ firstName, address, phone, email, image }) => {
   // console.log(firstName);
   return (
     <div className="display-personal">
       <div className="img-container">
-        <img src="" alt={firstName} />
+        <img src={image} alt={firstName} />
       </div>
-      <div>
-        <h4>Personal Details</h4>
+      <section className="personal">
+        <h3>Personal Details</h3>
         <ul>
           <li>
-            <h6>Address</h6>
+            <h4>Address</h4>
             <p>{address}</p>
           </li>
           <li>
-            <h6>Phone Number</h6>
+            <h4>Phone Number</h4>
             <p>{phone}</p>
           </li>
           <li>
-            <h6>Email</h6>
+            <h4>Email</h4>
             <p>{email}</p>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
   );
 };

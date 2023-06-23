@@ -1,7 +1,35 @@
 .App {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
-.cv-form {
-  flex: 1;
+
+.header-container {
+  background-color: var(--primary);
+  display: flex;
+  flex: 0 1 auto;
+  max-height: 150px;
+}
+
+.header {
+  padding: 20px 0;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  margin-left: 8rem;
+  align-self: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary);
+  color: white;
+  padding: 15px 0;
+}
+.footer a {
+  padding-top: 5px;
+  color: white;
 }

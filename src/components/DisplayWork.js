@@ -1,21 +1,20 @@
 const DisplayWork = ({ personal, experience, education }) => {
-  console.log(personal.description);
   return (
     <div className="display-work">
       <section className="description">
-        <h4>Description</h4>
-        <p>{personal.description}</p>
+        <h3>Description</h3>
+        <i>{personal.description}</i>
       </section>
       <section className="experience">
-        <h4>Experience</h4>
+        <h3>Experience</h3>
         <ul className="exp-container">
           {[...experience].reverse().map((item) => {
             const { id, position, company, address, from, to } = item;
             return (
               <li key={id}>
-                <div>{from + " - " + to}</div>
+                <p className="duration">{from + " - " + to}</p>
                 <div>
-                  <h6>{position}</h6>
+                  <h4>{position}</h4>
                   <p>{company + ", " + address}</p>
                 </div>
               </li>
@@ -24,15 +23,15 @@ const DisplayWork = ({ personal, experience, education }) => {
         </ul>
       </section>
       <section className="education">
-        <h4>Education</h4>
+        <h3>Education</h3>
         <ul className="edu-container">
           {[...education].reverse().map((item) => {
             const { id, university, degree, subject, city, from, to } = item;
             return (
               <li key={id}>
-                <div>{from + " - " + to}</div>
+                <p className="duration">{from + " - " + to}</p>
                 <div>
-                  <h6>{university + ", " + city}</h6>
+                  <h4>{university + ", " + city}</h4>
                   <p>{"Degree: " + degree}</p>
                   <p>{"Subject: " + subject}</p>
                 </div>

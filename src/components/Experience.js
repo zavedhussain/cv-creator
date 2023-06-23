@@ -1,6 +1,18 @@
+import { blankExperience } from "../data";
 const Experience = ({ resume, setResume }) => {
   const { experience } = resume;
-  // console.log(experience);
+  // console.log(blankExperience);
+
+  const handleAdd = () => {
+    let exp = {
+      ...blankExperience,
+      id: new Date().getTime().toString(),
+    };
+    setResume({
+      ...resume,
+      experience: [...experience, exp],
+    });
+  };
 
   const handleChange = (event, itemID) => {
     const newExperience = experience.map((item) => {
@@ -26,8 +38,13 @@ const Experience = ({ resume, setResume }) => {
     });
   };
   return (
-    <div className="experience">
-      <h3>Experience</h3>
+    <article className="experience">
+      <div className="article-header">
+        <h3>Experience</h3>
+        <button type="button" className="btn btn-success" onClick={handleAdd}>
+          Add
+        </button>
+      </div>
       {[...experience].reverse().map((item) => {
         const { id, position, company, address, from, to } = item;
         return (
@@ -70,14 +87,17 @@ const Experience = ({ resume, setResume }) => {
               id="to"
               onChange={(event) => handleChange(event, id)}
             ></input>
-            <button type="button" onClick={() => handleDelete(id)}>
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={() => handleDelete(id)}
+            >
               Delete
             </button>
           </section>
         );
       })}
-      <button type="button">Add</button>
-    </div>
+    </article>
   );
 };
 export default Experience;

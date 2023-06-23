@@ -1,4 +1,7 @@
-export const data = {
+import image1 from "./assets/image1.jpg";
+import empty from "./assets/empty.png";
+
+export const sample = {
   personal: {
     firstName: "John",
     lastName: "Doe",
@@ -6,6 +9,7 @@ export const data = {
     address: "Example Street 10",
     phone: "123456789",
     email: "john.doe@gmail.com",
+    image: image1,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempus imperdiet nisl sed vestibulum. Donec gravida, nulla eget blandit fermentum, mauris nisi rutrum libero, ac pharetra erat est sit amet tellus. Quisque fermentum dolor a interdum fermentum. Maecenas vehicula ac ipsum nec gravida. Integer quis porta turpis. Aenean et metus.",
   },
@@ -55,4 +59,33 @@ export const data = {
       to: "2010",
     },
   ],
+};
+export const blankExperience = {
+  id: null,
+  position: "Position",
+  company: "Company",
+  address: "City",
+  from: "From",
+  to: "To",
+};
+
+export const blankEducation = {
+  id: null,
+  university: "University",
+  city: "City",
+  degree: "Degree",
+  subject: "Subject",
+  from: "From",
+  to: "To",
+};
+
+export const blankPersonal = {
+  firstName: "",
+  lastName: "",
+  title: "",
+  address: "",
+  phone: "",
+  email: "",
+  image: empty,
+  description: "",
 };
