@@ -4,6 +4,8 @@ A resume builder app that generates your resume with a readymade template based 
 
 Check out live demo at [https://zavedhussain.github.io/cv-creator](https://zavedhussain.github.io/cv-creator).
 
+![Screenshot 2023-07-03 191648](https://github.com/zavedhussain/cv-creator/assets/45946700/4c5a3676-ab78-46bf-837c-c8803af7111e)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
